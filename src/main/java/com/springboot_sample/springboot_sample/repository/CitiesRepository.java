@@ -10,7 +10,7 @@ public class CitiesRepository {
     public CitiesRepository(){
 
     }
-
+ 
     public String create(String citiesName){
         Cities cities = new Cities(citiesName);
         this.cities.add(cities);
