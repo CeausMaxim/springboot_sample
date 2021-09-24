@@ -4,12 +4,12 @@ import com.springboot_sample.springboot_sample.repository.CitiesRepository;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-public class CitiesController {
+public class CityController {
     CitiesRepository citiesRepository = new CitiesRepository();
 
     @PostMapping("cities")
-    public String create(@RequestParam String citiesName){
-        return citiesRepository.create(citiesName);
+    public String create(@RequestParam String cityName, @RequestParam Integer countryId){
+        return citiesRepository.create(cityName, countryId);
     }
 
     @GetMapping("cities/{id}")
@@ -23,8 +23,8 @@ public class CitiesController {
     }
 
     @PutMapping("cities/{id}")
-    public String update(@PathVariable Integer id, @RequestParam String citiesName){
-        return citiesRepository.update(id, citiesName);
+    public String update(@PathVariable Integer id, @RequestParam String cityName){
+        return citiesRepository.update(id, cityName);
     }
 
     @DeleteMapping("cities/{id}")

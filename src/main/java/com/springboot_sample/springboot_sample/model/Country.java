@@ -1,17 +1,17 @@
 package com.springboot_sample.springboot_sample.model;
 
-public class Cities {
+public class Country {
     private Integer id = null;
     private String name = null;
     public static Integer autoincrementId = 0;
 
-    Cities() {
+    Country() {
 
     }
 
-    public Cities(String name) {
-        Cities.autoincrementId++;
-        this.id = Cities.autoincrementId;
+    public Country(String name) {
+        Country.autoincrementId++;
+        this.id = Country.autoincrementId;
         this.name = name;
     }
 
@@ -33,7 +33,7 @@ public class Cities {
 
     @Override
     public String toString() {
-        return "Cities{" +
+        return "Country{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
